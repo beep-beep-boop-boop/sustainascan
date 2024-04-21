@@ -39,8 +39,12 @@ const theme = createTheme({
         }),
       },
     },
-    MuiCard: {
-      styleOverrides: {},
+    MuiInputBase: {
+      styleOverrides: {
+        root: {
+          fontSize: "3em",
+        },
+      },
     },
   },
 });
