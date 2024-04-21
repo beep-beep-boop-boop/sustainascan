@@ -19,6 +19,7 @@ export default function BasicSelect({ categories }: Props) {
   const [category, setCategory] = useState("");
 
   const handleChange = (event: SelectChangeEvent) => {
+    // @ts-ignore
     setCategory(event.target.value);
 
     //onCategoryChange(category);

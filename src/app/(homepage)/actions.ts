@@ -26,7 +26,10 @@ export async function search(query?: string) {
     },
     ...(query && {
       where: (products, { sql }) =>
-        sql`to_tsvector(name || ' ' || description || ' ' || brand ) @@ to_tsquery(${query})`,
+        sql`to_tsvector(name || ' ' || description || ' ' || brand ) @@ to_tsquery(${query.replaceAll(
+          " ",
+          "+"
+        )})`,
     }),
     limit: 200,
   });

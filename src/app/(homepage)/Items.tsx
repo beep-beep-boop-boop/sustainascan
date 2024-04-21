@@ -37,6 +37,7 @@ export default function Items({ initialProducts }: Props) {
     <>
       <Searchbar
         value={searchQuery}
+        // @ts-ignore
         onChange={(e) => setSearchQuery(e.target.value)}
       />
       <Box
